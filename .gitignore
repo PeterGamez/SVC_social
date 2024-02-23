@@ -1,0 +1,11 @@
+# Editor
+.vscode
+
+# Composer
+vendor
+composer.lock
+
+# NodeJs
+node_modules
+package-lock.json
+dist

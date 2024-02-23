@@ -1,0 +1,377 @@
+root {
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100% !important;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #f0f2f5;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.nav-start {
+    margin-left: 1rem;
+}
+
+.nav-start .logo {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.nav-start .name {
+    padding-left: 0.5rem;
+    font-weight: 600;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav-center:hover {
+    background-color: #f0f2f5;
+    border-radius: 10px;
+}
+
+.nav-end {
+    margin-right: 1rem;
+}
+
+.dropstart .dropdown-toggle::before,
+.dropend .dropdown-toggle::after {
+    display: none;
+}
+
+
+main {
+    padding-left: 1rem;
+    padding-top: 6rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 576px) {
+    main {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    main {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    main {
+        padding-left: 25rem;
+        padding-right: 25rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-line {
+    white-space: pre-line
+}
+
+/* Card */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-body {
+    padding: 20px 20px 20px 20px;
+}
+
+.modal-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-input .close {
+    padding-right: 0.5rem;
+}
+
+.post-input .close .btn-close {
+    background-color: #e4e6eb;
+    border-radius: 100%;
+}
+
+.post-input .logo {
+    width: 50px;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+}
+
+.post-input textarea {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: 100px;
+    resize: none;
+}
+
+.post-input textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.post-input textarea::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.post-input textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.post-input textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.post-input button[type="submit"] {
+    width: 100%;
+}
+
+.post-input .input {
+    width: 100%;
+}
+
+.post-input .input button,
+.post-input .input a {
+    background-color: #f0f2f5;
+    color: #65676b;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-align: left;
+}
+
+.post-input .input button:hover {
+    background-color: #e2e6ea;
+}
+
+.post-title .logo {
+    width: 50px;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+}
+
+.post-title .name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.post-title .name a {
+    color: #050505;
+}
+
+.post-title .extra {
+    color: #6c757d;
+    margin-left: auto;
+    /* btn-group */
+    display: flex;
+    align-items: center;
+}
+
+.post-title .extra a {
+    color: #6c757d;
+    margin-right: 0.5rem;
+}
+
+.post-title .extra .close {
+    padding-left: 0.5rem;
+}
+
+.post-info {
+    padding-top: 0.5rem;
+    white-space: pre-line
+}
+
+.post-comment {
+    padding-top: 0.5rem;
+}
+
+.post-comment .btn {
+    background-color: #f0f2f5;
+    color: #65676b;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-align: left;
+}
+
+.post-comment .logo {
+    width: 50px;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+}
+
+.post-comment .name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.post-comment .name a {
+    color: #050505;
+}
+
+.post-comment .comment-info {
+    white-space: pre-line
+}
+
+.post-comment .extra {
+    color: #6c757d;
+    margin-left: auto;
+}
+
+.post-img {
+    padding-top: 0.5rem;
+    text-align: center
+}
+
+.post-img img {
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    max-width: 100%;
+}
+
+.profile .close {
+    padding-left: 0.5rem;
+}
+
+.profile .close button {
+    background-color: #e4e6eb;
+    border-radius: 100%;
+}
+
+.profile button[type="submit"] {
+    width: 100%;
+}
+
+.profile-title .logo {
+    width: 130px;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+}
+
+.profile-title .name .displayname {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.profile-title .name .main {
+    font-size: 20px;
+    color: #65676b;
+}
+
+.profile-title .extra {
+    margin-left: auto;
+}
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.login .card {
+    width: 400px;
+}
+
+.error-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.error-404 .card {
+    width: 400px;
+    height: 200px;
+}
