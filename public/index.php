@@ -29,8 +29,4 @@ $agent_url = $_SERVER['REQUEST_URI'];
 $agent_path = parse_url($agent_url, PHP_URL_PATH);
 $agent_request = explode('/', $agent_path);
 
-if (str_starts_with($agent_path, '/api')) {
-    require_once __ROOT__ . '/routes/api.php';
-} else {
-    require_once __ROOT__ . '/routes/web.php';
-}
+require_once __ROOT__ . '/routes/web.php';

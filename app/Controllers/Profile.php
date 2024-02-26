@@ -102,21 +102,24 @@ class Profile
         }
 
         global $conn;
-        $sql = "UPDATE account SET ";
+        $value = [];
         if ($username != $_SESSION['account']['username']) {
             $sql .= "username = '$username', ";
+            array_push($value, "username = '$username'");
         }
         if ($email != $_SESSION['account']['email']) {
             $sql .= "email = '$email', ";
+            array_push($value, "email = '$email'");
         }
         if ($displayname != $_SESSION['account']['displayname']) {
             $sql .= "displayname = '$displayname', ";
+            array_push($value, "displayname = '$displayname'");
         }
-        if ($avatarurl) {
+        if (isset($avatarurl)) {
             $sql .= "avatar = '$avatarurl', ";
+            array_push($value, "avatar = '$avatarurl'");
         }
-        $sql = rtrim($sql, ', ');
-        $sql .= " WHERE id = " . $_SESSION['account']['id'];
+        $sql = "UPDATE account SET " . implode(', ', $value) . " WHERE id = " . $_SESSION['account']['id'];
         $query = mysqli_query($conn, $sql);
 
         if ($query) {
@@ -129,7 +132,7 @@ class Profile
             if ($displayname != $_SESSION['account']['displayname']) {
                 $_SESSION['account']['displayname'] = $displayname;
             }
-            if ($avatarurl) {
+            if (isset($avatarurl)) {
                 if ($_SESSION['account']['avatar'] != '/resources/images/default-avatar.png') {
                     unlink(__ROOT__ . '/public' . $_SESSION['account']['avatar']);
                 }
