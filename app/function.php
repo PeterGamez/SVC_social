@@ -1,14 +1,5 @@
 <?php
 
-function api($file, $data = null): void
-{
-    if ($data) {
-        extract($data);
-    }
-
-    include __ROOT__ . '/api/' . $file . '.php';
-}
-
 function views($file, $data = null): void
 {
     if ($data) {
